@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="WineTitle">
+        <h1>{{ wine.name }}</h1>
+        <h2>{{ wine.region }}</h2>
+        <h3>{{ wine.color }} - {{ wine.vintage }}</h3>
+    </div>
+    <div class="WineContainer">
+        <img class="imgwine" src="/assets/images/wines/{{ wine.id }}.jpg" alt="{{ wine.name }}">
+
+        <div class="wineCharacters">
+            <div><p class="description">Description</p></div>
+
+            <p class="wineDetail">Producteur : {{ wine.domain }}</p>
+            <p class="wineDetail">Région : {{ wine.region }}</p>
+            <p class="wineDetail">Millésime : {{ wine.vintage }}</p>
+            <p class="wineDetail">Couleur : {{ wine.color }}</p>
+            <p class="wineDetail">Cépage : {% for grape in grapes %}{{ grape.type }} {% endfor %}</p>
+            <p class="wineDetail">Garde : {{ wine.long_keeping }}</p>
+        </div>
+    </div>
+    <div>
+    {% if session.login is empty %}
+        <a href="#" class="absent" ></a>
+    {% else %}
+        <a href="/AdminWine/index/{{ wine.id }}" class="returnAdmin">Retour à l'espace d'administration</a>
+    {% endif %}
+    </div>
+{% endblock %}

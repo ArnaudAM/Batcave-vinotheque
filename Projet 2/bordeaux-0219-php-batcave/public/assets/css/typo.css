@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'komodaregular_';
+    src: url('komoda-webfont.woff2') format('woff2'),
+    url('komoda-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

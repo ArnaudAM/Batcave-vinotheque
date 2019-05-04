@@ -1,0 +1,95 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Contactez-nous</h1>
+    <section class="contact">
+        {% for error in errors %}
+            <div class="alert alert-danger taille">
+                <strong>{{ error }}</strong>
+            </div>
+        {% endfor %}
+        <div class="infos1">
+            <div class="infos">
+                <h2>Retrouvez nous à notre boutique !</h2>
+
+                <p><b>Tél :</b> +33 (0)5 56 58 30 00<br/>
+                    contact@cavacamille.com</p>
+
+                <p><b>Adresse :</b> 69 Rue Camille Godard, 3000 Bordeaux</p>
+
+                <p><b>Horaires :</b></p>
+                <table class="horaires">
+                    <tr>
+                        <td class="HC T1">lundi</td>
+                        <td class="HC T2">10:00–12:30, 15:00–19:00</td>
+                    </tr>
+                    <tr>
+                        <td class="HC T1">mardi</td>
+                        <td class="HC T2">10:00–12:30, 15:00–19:00</td>
+                    </tr>
+                    <tr>
+                        <td class="HC T1">mercredi</td>
+                        <td class="HC T2">10:00–12:30, 15:00–19:00</td>
+                    </tr>
+                    <tr>
+                        <td class="HC T1">jeudi</td>
+                        <td class="HC T2">10:00–12:30, 15:00–19:00</td>
+                    </tr>
+                    <tr>
+                        <td class="HC T1">vendredi</td>
+                        <td class="HC T2">10:00–12:30, 15:00–19:00</td>
+                    </tr>
+                    <tr>
+                        <td class="HC T1">samedi</td>
+                        <td class="HC T2">10:00–12:30</td>
+                    </tr>
+                    <tr>
+                        <td class="HC T1">samedi</td>
+                        <td class="HC T2">Fermé</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="google">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.3539553239802!2d-0.5793183486883979!3d44.85508858179678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd552871685f6acb%3A0xd5728a0542f6eb6e!2sLa+Cav&#39;a+Camille!5e0!3m2!1sfr!2sfr!4v1556114832549!5m2!1sfr!2sfr"
+                        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+        <div class="contact2">
+            <h2>Envoyez-nous un email !</h2>
+            <form class="form-contact" method="post" action="/Contact/send">
+                <div>
+                    <label for="lastname">Nom</label>
+                    <input type="text" name="lastname" value="">
+                </div>
+                <div>
+                    <label for="firstname">Prénom</label>
+                    <input type="text" name="firstname" value="">
+                </div>
+
+                <div>
+                    <label for="email">Adresse email</label>
+                    <input type="email" name="email" value="">
+                </div>
+                <div>
+                    <label for="tel">Numéro de téléphone</label>
+                    <input type="text" name="tel" placeholder="00 00 00 00 00" style="color: rgba(0,0,0,0.4);">
+                </div>
+                <div>
+                    <label for="subject">Subject</label>
+                    <SELECT name="subject" size="1">
+                        <OPTION>Choisir...
+                        <OPTION>Je suis un.e particulier.e
+                        <OPTION>Je suis un.e professionnel.le
+                    </SELECT>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea name="message"></textarea>
+                </div>
+                <button type="submit" value="submit">ENVOYER</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,33 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <h1>Vins</h1>
+    <div class="container">
+
+    <table class="table">
+
+            <th>Nom du vin</th>
+            <th>Domaine</th>
+            <th>Région</th>
+            <th>Millésime</th>
+            <th>Type</th>
+        {% for item in wines %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.domain }}</td>
+                <td>{{ item.region }}</td>
+                <td>{{ item.vintage }}</td>
+                <td>{{ item.color }}</td>
+
+                <td><a href="/AdminWine/edit/{{ item.id }}"><i class="fas fa-edit"></i></a></td>
+                <td><a href="/AdminWine/delete/{{ item.id }}"><i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </table>
+    <a class="btn btn-primary" href="/AdminWine/add">Ajouter</a>
+    </div>
+{% endblock %}

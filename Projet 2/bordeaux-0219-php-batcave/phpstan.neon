@@ -1,0 +1,4 @@
+parameters:
+	ignoreErrors:
+		- '#Constant [A-Z_]+ not found.#'
+		- '#End of line character [A-Z_]+#'

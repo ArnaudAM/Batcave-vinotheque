@@ -1,0 +1,68 @@
+<div class="form-admin">
+
+    <form method="post" action="{{ formAction }}" enctype="multipart/form-data">
+        <div>
+            <input type="hidden" value="{{ wine.id }}" name="id" required>
+        </div>
+        <div>
+            <label for="name">Nom</label>
+            <input type="text" value="{{ wine.name }}" name="name" required>
+        </div>
+        <div>
+            <label for="domain">Domaine</label>
+            <input type="text" value="{{ wine.domain }}" name="domain" required>
+        </div>
+        <div>
+            <label for="region">Région</label>
+            <select name="region" required>
+                {% for region in regions %}
+                    <option{% if wine.region is not empty and wine.region == region.name %} selected {%  endif %}>
+                        {{ region.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+        <div>
+            <label for="vintage">Millésime</label>
+            <select name="vintage" required>
+                {% for year in 2019..1789 %}
+                    <option{% if wine.vintage is not empty and wine.vintage == year %} selected {%  endif %}>
+                        {{ year }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="color">Couleur</label>
+            <select name="color" required>
+            {% for color in colors %}
+                <option{% if wine.color is not empty and wine.color == color.name %} selected {%  endif %}>
+                    {{ color.name }}
+                </option>
+            {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="alcohol_level">Degré d'alcool</label>
+            <input type="text" value="{{ wine.alcohol_level }}" name="alcohol_level" required>
+        </div>
+        <div>
+            <label for="long_keeping">Temps de garde</label>
+            <input type="text" value="{{ wine.long_keeping }}" name="long_keeping" required>
+        </div>
+        <div>
+            <label for="history">Description</label>
+            <input type="textarea" value="{{ wine.history }}" name="history">
+        </div>
+        <div>
+            <label for="history">Ajouter la photo</label>
+            <input type="hidden" name="MAX_FILE_SIZE" value="200000">
+            <input type="file" name="picture" value="Aucun fichier séléctionné">
+        </div>
+        <button type="submit" value="submit">Valider</button>
+        </div>
+    </form>
+</div>
+
+

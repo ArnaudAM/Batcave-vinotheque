@@ -1,0 +1,140 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <h1>Choisir votre vin efficacement <br>grâce à notre moteur de suggestion : Alfred !</h1>
+
+    <div class="textList">
+        <p class="textBoldList">Choisir un vin peut s’avérer compliqué...</p>
+        <p>Pas de souci Alfred est là pour vous aider.
+            Selon vos goût, selon le plat, remplissez ce petit formulaire. Tout n’est pas obligatoire, remplissez ce que
+            vous souhaitez et
+            Alfred vous donnera les meilleurs suggestions d’achat au sein de notre cave.</p>
+    </div>
+    <div>
+        <div class="blocQuizz">
+
+            <form action="/Quizz/index/" method="post">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="quizzColor">
+
+                            <h3 class="titreQuizz text-lg-left">Vous préférez :</h3>
+                            {% for color in colors %}
+                                <div class="form-check">
+                                    <input class="form-check-input" name="color[]" type="checkbox"
+                                           value="{{ color.name }}" id="defaultCheck{{ color.name }}">
+                                    <label class="form-check-label" for="defaultCheck{{ color.name }}">
+                                        {{ color.name }}
+                                    </label>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="quizzAgriculture">
+
+                            <h3 class="titreQuizz">Mode d'agriculture :</h3>
+                            {% for agricultureType in agricultureTypes %}
+                                <div class="form-check">
+                                    <input class="form-check-input" name="agriculture_id[]" type="checkbox"
+                                           value="{{ agricultureType.id }}" id="defaultCheck{{ agricultureType.type }}">
+                                    <label class="form-check-label" for="defaultCheck{{ agricultureType.type }}">
+                                        {{ agricultureType.type }}
+                                    </label>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="quizzRegion">
+
+                            <h3 class="titreQuizz">À moins que vous préféreriez une région :</h3>
+                            {% for region in regions %}
+                                <div class="form-check">
+                                    <input class="form-check-input" name="region[]" type="checkbox"
+                                           value="{{ region.name }}" id="defaultCheck{{ region.name }}">
+                                    <label class="form-check-label" for="defaultCheck{{ region.name }}">
+                                        {{ region.name }}
+                                    </label>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 ">
+                        <div class="quizzArome">
+
+                            <h3 class="titreQuizz">Arôme :</h3>
+                            {% for arome in aromes %}
+                                <div class="form-check">
+                                    <input class="form-check-input" name="aroma_id[]" type="checkbox"
+                                           value="{{ arome.id }}" id="defaultCheck{{ arome.name }}">
+                                    <label class="form-check-label" for="defaultCheck{{ arome.name }}">
+                                        {{ arome.name }}
+                                    </label>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                        <div class="quizzCuisine">
+
+                            <h3 class="titreQuizz">Qu'est-ce que vous allez cuisiner ?</h3>
+                            {% for food in foods %}
+                                <div class="form-check">
+                                    <input class="form-check-input" name="food_id[]" type="checkbox"
+                                           value="{{ food.id }}" id="defaultCheck{{ food.type }}">
+                                    <label class="form-check-label" for="defaultCheck{{ food.type }}">
+                                        {{ food.type }}
+                                    </label>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="alfredHelpMe">ALFRED AIDE-MOI !</button>
+
+                </div>
+
+            </form>
+
+
+        </div>
+        {% if suggestions is empty %}
+            <p class="absent">Alfred vous suggère :</p>
+        {% else %}
+        <p class="textAlfredHelp">Alfred vous suggère :</p>
+        {% endif %}
+    </div>
+
+    <div class="allCardsWine">
+
+        {% for suggestion in suggestions %}
+
+            <div class="cardsWine">
+                <a href="/Wine/detail/{{ suggestion.id }}">
+                    <img class="sizeImg" src="/assets/images/wines/{{ suggestion.id }}.jpg" alt=""></a>
+                <div>
+                    <p class="domainCards">{{ suggestion.name }}</p>
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+
+
+{% endblock %}
+
+
+

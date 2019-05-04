@@ -1,0 +1,65 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <h1>La cave de la Bat’Cave</h1>
+
+    <div class="blocList">
+
+        <p class="textList textBoldList">Venez découvrir la richesse de notre caves, des vins de nos régions mais pas que...</p>
+        <p class="textList"> Tous nos vins sont disponibles dans notre boutique.<br/>
+            Vous pouvez également nous contacter pour toute demande spécifique !</p>
+
+
+        <p class="textFiltrerPar">FILTRER PAR</p>
+        <div class="filtreButtons">
+                <div class="dropdown dropdown1">
+                    <a href="/Wine/list" class="boutonmenuprincipal linkToutNosVins">Tous nos vins</a>
+                </div>
+
+                <div class="dropdown">
+                    <span class="boutonmenuprincipal noneClick">Couleur</span>
+                    <div class="dropdown-child">
+                        {%  for color in colors  %}
+                            <a href="/Wine/list/color/{{ color.name }}">{{ color.name }}</a>
+                        {%  endfor  %}
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <span class="boutonmenuprincipal noneClick">Région</span>
+                    <div class="dropdown-child">
+                        {%  for region in regions  %}
+                            <a href="/Wine/list/region/{{ region.name }}">{{ region.name }}</a>
+                        {%  endfor  %}
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <span class="boutonmenuprincipal noneClick">Cépage</span>
+                    <div class="dropdown-child">
+                        {%  for grape in grapes  %}
+                            <a href="/Wine/list/type/{{ grape.type }}">{{ grape.type }}</a>
+                        {%  endfor  %}
+                    </div>
+            </div>
+
+        </div>
+
+
+        <div class="allCardsWine">
+
+            {% for wine in wines %}
+
+                <div class="cardsWine">
+                    <a href="/Wine/detail/{{ wine.id }}"><img class="sizeImg" src="/assets/images/wines/{{ wine.id  }}.jpg" alt=""></a>
+                    <p class="domainCards">{{ wine.name }}</p>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+{% endblock %}

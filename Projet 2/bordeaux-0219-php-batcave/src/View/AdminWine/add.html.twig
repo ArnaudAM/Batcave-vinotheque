@@ -1,0 +1,10 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Ajouter un nouveau vin</h1>
+    {% include 'AdminWine/_form.html.twig' %}
+    <a href="/AdminWine/index/{{ wine.id }}" class="returnAdmin">Retour à l'espace d'administration</a>
+
+
+
+{% endblock %}

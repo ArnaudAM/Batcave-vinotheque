@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}{% endblock %}</title>
+    {% block stylesheet %}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- typo -->
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,400,500,700" rel="stylesheet">
+        <!-- perso typo CSS -->
+        <link rel="stylesheet" href="/assets/css/typo.css">
+        <!-- perso CSS -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+    {% endblock %}
+
+    <link rel="icon" href="/assets/images/favicon.png">
+</head>
+
+<body>
+<div class="menufond"></div>
+<header>
+    <div class="entete">
+        <a href="/Home/index"><img class="logo1" src="/assets/images/logomarron.png" alt="logo de la Bat'Cave"/></a>
+    </div>
+    <div class="connexionhome">
+        {% if session.login is empty %}
+            <a href="/AdminLogin/index" class="connexion1" ><span class="connexion2">Connexion</span></a>
+        {% else %}
+            <a href="/AdminLogin/logout" class="connexion1" ><span class="connexion2">Deconnexion</span></a>
+        {% endif %}
+
+    </div>
+    <nav class="menu menu--ama" role="main-menu">
+        {# {{ (curPage == '/Home/index' ? 'HOMEactive':''  }}#}
+        <a class="menu__item
+            {% if curPage == '/Home/index'%}
+            HOMEactive
+            {% endif %}"
+           href="/Home/index">
+            <span class="menu__item-name">Accueil</span>
+        </a>
+
+        <a class="menu__item
+            {% if curPage == '/Wine/list'%}
+            VINSactive
+            {% endif %}" href="/Wine/list" >
+            <span class="menu__item-name">Vins</span>
+        </a>
+        <a class="menu__item
+            {% if curPage == '/AboutUs/index'%}
+            DECOUVRIRactive
+            {% endif %}" href="/AboutUs/index" >
+            <span class="menu__item-name">Decouvrir</span>
+        </a>
+        <a class="menu__item
+            {% if curPage == '/Contact/index'%}
+            CONTACTactive
+            {% endif %}" href="/Contact/index" >
+            <span class="menu__item-name">Contact</span>
+        </a>
+
+    </nav>
+</header>
+
+

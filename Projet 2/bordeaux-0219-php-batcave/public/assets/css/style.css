@@ -1,0 +1,1006 @@
+/*------------------------GENERAL -----------------------*/
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 3rem;
+    color: #8B806F;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: left;
+    color: #8B806F;
+    margin-bottom: 20px;
+
+}
+
+h3 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: left;
+    color: #8B806F;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+}
+
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #8B806F;
+}
+
+/*------------------------MENU -----------------------*/
+
+header {
+    background-color: #A2B4A6;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    position: relative;
+}
+
+.entete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.logo1 {
+    box-sizing: border-box;
+    width: 200px;
+}
+.connexionhome{
+    position: relative;
+    top: -110px;
+    padding-left: 35px;
+}
+
+.connexion1 {
+    box-sizing: border-box;
+    padding: 1px 0;
+    border-bottom: 2px solid #8B806F;
+}
+
+.connexion2 {
+    color: #8B806F;
+    text-decoration: none;
+    -webkit-transition: prop .4s;
+    -moz-transition: prop .4s;
+    -ms-transition: prop .4s;
+    -o-transition: prop .4s;
+    transition: prop .4s;
+}
+
+.connexion2:hover {
+    color: #FFBEB5;
+    text-decoration: none;
+}
+
+.connexion1:hover {
+    border-bottom: 2px solid #FFBEB5;
+    text-decoration: none;
+}
+
+.menu--ama {
+    counter-reset: itemCounter;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu--ama .menu__item {
+    font-family: 'komodaregular_';
+    letter-spacing: 8px;
+    font-size: 2.5em;
+    margin: 1em 0;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    color: white;
+}
+
+.menu__item {
+    border-top: 3px solid white;
+}
+
+.HOMEactive {
+    border-top: 3px solid #FDBF51;
+}
+
+.HOMEactive span {
+    color: #FDBF51;
+}
+
+.VINSactive {
+    border-top: 3px solid #FFBEB5;
+}
+
+.VINSactive span {
+    color: #FFBEB5;
+}
+
+.DECOUVRIRactive {
+    border-top: 3px solid #DACFBE;
+}
+
+.DECOUVRIRactive span {
+    color: #DACFBE;
+}
+
+.CONTACTactive {
+    border-top: 3px solid #8B806F;
+}
+
+.CONTACTactive span {
+    color: #8B806F;
+}
+
+.menu--ama .menu__item:first-child {
+    --menu-item-color: #FDBF51;
+}
+
+.menu--ama .menu__item:nth-child(2) {
+    --menu-item-color: #FFBEB5;
+}
+
+.menu--ama .menu__item:nth-child(3) {
+    --menu-item-color: #DACFBE;
+}
+
+.menu--ama .menu__item:nth-child(4) {
+    --menu-item-color: #8B806F;
+}
+
+.menu--ama .menu__item-name span {
+    display: inline-block;
+}
+
+/*------------------------FOOTER -----------------------*/
+footer {
+    background-color: #A2B4A6;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 20px;
+}
+
+.nav a{
+    display: inline;
+}
+
+
+.nav1 {
+    text-decoration: none;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+.nav2{
+    color: white;
+    font-family: 'komodaregular_';
+    letter-spacing: 6px;
+    font-size: 1.8em;
+    line-height: 1.8em;
+    margin-right: 20px;
+}
+
+footer .nav div .nav1:hover span{
+    color: #FFBEB5;
+}
+
+footer .nav div .nav1:hover{
+    text-decoration: none;
+}
+
+footer > p {
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 0.8em;
+}
+
+
+/*------------------------HOME -----------------------*/
+
+.block-home {
+    display: flex;
+    justify-content: space-around;
+    height: 30vw;
+}
+
+.block-home-text {
+    text-align: center;
+}
+
+.home-text {
+    text-align: center;
+}
+
+.imgCards
+{
+    width: 350px;
+    height: 450px;
+}
+
+.textDescriptionHome
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.cardBody1
+{
+    width: 350px;
+    background-color: #FDBF51;
+    transition: 0.4s;
+}
+
+.cardBody2
+{
+    width: 350px;
+    background-color: #FFBEB5;
+    transition: 0.4s;
+}
+
+.cardBody1:hover
+{
+    background-color: #c4b59e;
+}
+
+.cardBody1:hover p
+{
+    color: #FDBF51;
+}
+
+.cardBody2:hover
+{
+    background-color: #c4b59e;
+}
+
+.cardBody2:hover p
+{
+    color: #FFBEB5;
+}
+
+.card-text
+{
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    font-size: 1.69em;
+}
+
+.cards > a:hover
+{
+    text-decoration: none;
+}
+
+.CardsHome
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 50px 10% 0px 10%;
+}
+
+/*------------------------QUIZ-----------------------*/
+
+.blocQuizz {
+    margin: 30px 15% 40px 15%;
+    border: solid #c4b59e 0.3mm;
+    border-radius: 10px;
+    padding: 50px;
+    background-color: #DACFBE;
+}
+
+.form-check-label {
+    margin-left:15px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size:0.9em;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    border-radius: 50px;
+    height: 25px;
+    width: 27px;
+    background-color: #ffffff;
+    border: 0.6px solid #9e9090;
+}
+
+.titreQuizz {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.titreQuizz2 {
+    margin-top:40px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #FFBEB5;
+}
+
+.alfredHelpMe {
+    width: 200px;
+    font-size: 1.2em;
+    position: relative;
+    top : 10px;
+    left: calc( 50% - 100px );
+}
+
+.textAlfredHelp {
+    font-weight: bold;
+    font-size: 1.6em;
+    margin: 30px 15% 40px 15%;
+}
+
+/*------------------------ WINE DETAIL -----------------------*/
+
+.WineTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.WineTitle > h2,
+.WineTitle > h3 {
+    text-align: center;
+}
+
+.WineContainer {
+    width: 90%;
+    margin: 0px auto 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.imgwine {
+    max-width: 428px;
+    max-height: 600px;
+    margin: 2px auto 10px;
+}
+
+.wineCharacters {
+    background-color: #A2B4A6;
+    margin: 15px auto 10px;
+    padding-top: 20px;
+    width: 500px;
+    height: 450px;
+}
+
+.wineCharacters > div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.absent{
+
+    display: none;
+}
+
+.description {
+    width: 300px;
+    font-weight: bold;
+    text-align: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.wineDetail{
+    padding-left: 30px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    color: white;
+}
+
+/*------------------------AboutUs-----------------------*/
+
+.bloc-aboutus, .bloc-aboutus2{
+    display: flex;
+    margin: 3% 7% 2% 7%;
+    justify-content: center;
+    align-items: center;
+}
+
+.textaboutus{
+    padding: 10px;
+}
+
+.textaboutus > h3{
+    padding-bottom: 2%;
+}
+
+.img-photodecouvrir_1{
+    width: 100%;
+}
+
+.textaboutus > ul {
+    color: #8B806F;
+}
+
+.photodecouvrir_2{
+    width: 100%;
+}
+
+.textaboutus2 > h3{
+    padding-bottom: 2%;
+}
+
+.textaboutus2{
+    width: 100%;
+}
+
+.bloc-aboutus3, .bloc-aboutus4{
+    margin: 3% 7% 2% 7%;
+}
+
+.bloc-aboutus3 > h3{
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+.photopaysage_Decouvrir{
+    width: 100%;
+    margin: auto;
+}
+
+/*------------------------Contact-----------------------*/
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infos1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.horaires {
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+
+.HC {
+    font-family: 'Roboto', sans-serif;
+    color: #8B806F;
+}
+
+.T1 {
+    width: 100px;
+}
+
+.T2 {
+    width: 360px;
+    text-align: left;
+}
+
+.contact2 {
+    margin: 0 15% 0;
+    width: 100%;
+}
+
+.contact2 > h2{
+    margin-left: 10%;
+}
+
+.form-contact {
+    border-radius: 10px;
+    margin: 40px auto;
+    padding: 30px 60px;
+    width : 70%;
+    background-color: #DACFBE;
+    position: relative;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input, textarea, select {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+textarea {
+    resize: vertical;
+    height: 200px;
+}
+
+button {
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    margin: 20px 0px 10px;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF;
+    background-color: #FFBEB5;
+    border: none;
+    -webkit-transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    transition: background-color .5s;
+    position: relative;
+    left: calc(50% - 75px);
+}
+
+button:hover {
+    color: #8B806F;
+    background-color: #FDBF51;
+}
+
+.taille {
+    width: 60%;
+    text-align: center;
+}
+
+/*------------------------Admin Login -----------------------*/
+.sectionAdmin{
+    background-color: #A2B4A6;
+    width: 100%;
+    height: 100%;
+    margin-top: -8%;
+    margin-bottom: -4%;
+    padding-bottom: 11%;
+    align-items: center;
+}
+
+.formAdminLogin > .Box > div > label{
+    color: #8B806F;
+}
+
+.title-admin-login {
+    padding-top: 2%;
+    text-align: center;
+}
+
+.admin-login-form {
+    display: flex;
+    justify-content: center;
+}
+
+.identificationBox{
+    width: 30em;
+    margin: 0 auto;
+}
+
+.passwordBox{
+    margin: 0 auto;
+}
+
+.admin-login-btn {
+    background-color: #FFBEB5;
+    align-items: center;
+}
+
+/*------------------------AdminWine Login -----------------------*/
+.title-admin-login {
+    text-align: center;
+}
+
+.admin-login-btn {
+    background-color: #FFBEB5;
+}
+
+.form-admin {
+    border-radius: 10px;
+    margin: 40px auto;
+    padding: 30px 60px;
+    width: 65%;
+    background-color: #DACFBE;
+    position: relative;
+}
+
+.returnEdit {
+    cursor: pointer;
+    width: 290px;
+    display: inline;
+    text-transform: uppercase;
+    color: #8B806F;
+    text-decoration: underline;
+    padding: 10px auto;
+    box-sizing: border-box;
+    position: relative;
+    left: calc(50% - 145px);
+}
+
+.returnAdmin {
+    cursor: pointer;
+    width: 290px;
+    display: inline;
+    text-transform: uppercase;
+    color: #8B806F;
+    text-decoration: underline;
+    padding: 10px auto;
+    box-sizing: border-box;
+    position: relative;
+    left: calc(50% - 145px);
+}
+
+.returnAdmin:hover {
+    color: #A2B4A6;
+}
+
+/*------------------------Wine List -----------------------*/
+.filtreButtons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.boutonmenuprincipal {
+    background-color: #ffffff;
+    color: #8B806F;
+    border: solid #c4b59e 0.3mm;
+    cursor: pointer;
+    padding:4.5px 30px;
+    font-size: 1.5em;
+}
+
+.noneClick{
+    pointer-events: none;
+}
+
+
+.dropdown1 a:hover
+{
+    color:#c4b59e;
+    text-decoration:none;
+}
+
+.dropdown-child {
+    z-index: 1;
+    border: solid #c4b59e 0.3mm;
+    position: absolute;
+    display: none;
+    background-color: #FFBEB5;
+    min-width: 100%;
+}
+
+.dropdown-child a {
+    color: #8B806F;
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+.rechercheVinForm {
+    margin: 4% 50% 5% 25%;
+    width: 60%;
+    border: solid #c4b59e 0.3mm;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #FFBEB5;
+}
+
+.textBoldList {
+    font-weight: bold;
+}
+.textList {
+    margin:0 12%;
+}
+
+.textFiltrerPar {
+    font-weight: bold;
+    color: #8B806F;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-left: 12%;
+}
+
+.allCardsWine {
+    margin: 5% 10% 0% 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.sizeImg {
+    width: 220px;
+}
+
+.cardsWine {
+    margin: 0% 4% 0% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.domainCards
+{
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/*------------------------MEDIA QUERIES-----------------------*/
+@media screen and (max-width: 1024px) {
+    .textList {
+        margin:0 10%;
+        padding-bottom: 10px;
+    }
+
+    .blocQuizz {
+        margin: 10px 10%;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+
+    h3{
+        font-size: 1.2em;
+    }
+
+    p{
+        font-size: 1em;
+        line-height: 1.2em;
+    }
+
+    .infos1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .WineContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgwine {
+        width: 90%;
+        max-height: 100%;
+        margin: 2px auto 10px;
+    }
+
+    .wineCharacters {
+        width: 90%;
+        height: 100%;
+    }
+
+    .align-aboutus > .titre-aboutus > h1{
+        font-size: 1.8em;
+    }
+
+    .textaboutus{
+        width: 100%;
+    }
+
+    .textaboutus > h3{
+        font-size: 1.2em;
+    }
+
+    .textaboutus > p{
+        font-size: 0.8em;
+        line-height: 1.2em;
+    }
+
+    .textaboutus > ul > li > p{
+        font-size: 0.8em;
+        line-height: 1.2em;
+    }
+
+    .bloc-aboutus2{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .bloc-aboutus3 > div > h3{
+        font-size: 1.2em;
+    }
+
+    .bloc-aboutus3 > div > p{
+        font-size: 0.8em;
+        line-height: 1.2em;
+    }
+
+    footer .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .nav div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav2{
+        margin-right: 0px;
+    }
+
+    .blocQuizz {
+        margin: 5%;
+    }
+
+    p{
+        font-size: 0.8em;
+    }
+
+    .form-contact{
+        width: 85%;
+        padding: 10px 20px;
+    }
+
+    .boutonmenuprincipal {
+        font-size: 18px;
+    }
+
+    /*----CardsHome----*/
+
+    .imgCards
+    {
+        width: 250px;
+        height: 320px;
+    }
+    .cardBody1
+    {
+        width: 250px;
+        margin-bottom: 50px;
+    }
+
+    .cardBody2
+    {
+        width: 250px;
+        margin-bottom: 50px;
+    }
+
+    .card-text
+    {
+        font-size: 1.1em;
+    }
+    .CardsHome
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 801px) and (max-width: 920px) {
+    .imgCards
+    {
+        width: 300px;
+        height: 400px;
+    }
+    .cardBody1
+    {
+        width: 300px;
+        margin-bottom: 50px;
+    }
+
+    .cardBody2
+    {
+        width: 300px;
+        margin-bottom: 50px;
+    }
+
+    .card-text
+    {
+        font-size: 1.4em;
+    }
+    .CardsHome
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .google {
+        display: none;
+    }
+
+    .connexionhome{
+        position: relative;
+        top: -85px;
+    }
+
+    .logo1 {
+        box-sizing: border-box;
+        width: 150px;
+    }
+
+    .menu--ama{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .menu--ama .menu__item{
+        margin: 0;
+        text-align: center;
+    }
+    .menu--ama .menu__item:hover {
+        text-decoration: none;
+    }
+    .filtreButtons {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    .dropdown{
+        margin-bottom: 30px;
+    }
+    .textFiltrerPar {
+        font-size: 1.5em;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .connexionhome{
+        position: relative;
+        top: -85px;
+        padding-left: 15px;
+    }
+
+}
